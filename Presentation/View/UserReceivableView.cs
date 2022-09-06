@@ -21,9 +21,9 @@ namespace Presentation.View
             return input;
         }
 
-        public void ShowResult(double total)
+        public void ShowResult(int id, int totalCubes,double total)
         {            
-            Console.WriteLine("R. La deuda total del socio es: {0}",total);
+            Console.WriteLine("R. El consumo del socio " + id +" es de "+ totalCubes+" cubos. La deuda actual es de "+ total+" Bs");
             Console.WriteLine("======================================");
         }
     }
