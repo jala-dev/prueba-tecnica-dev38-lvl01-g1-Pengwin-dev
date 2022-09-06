@@ -59,4 +59,20 @@ namespace BusinessLogic
             return menu.ChooseOption();            
         }
     }
+     
+     //Try to refactor Menu from switch to a dictionary that maps List<Commands> to Options
+     private void RefactoredExecuteOption(int option)
+        {
+            string MapOptionToCommand(commands)
+                {
+                    var mapping = new Dictionary<commands, IWaterCommand>
+                    {
+                        {
+                    }
+                
+                    return mapping[commands];
+                }
+}
+
+
 }
