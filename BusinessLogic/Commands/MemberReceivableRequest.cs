@@ -26,9 +26,7 @@ namespace BusinessLogic.Commands
 
             List<Consumption> memberConsumptions = new ConsumptionRepository().GetConsumptionByMember(entity);
 
-            double total = this.CalculateTotalReceivable(memberConsumptions);
-
-            view.ShowResult(total);            
+                  
         }
         private int CalculateTotalCubes(List<Consumption> memberConsumptions)
         {
