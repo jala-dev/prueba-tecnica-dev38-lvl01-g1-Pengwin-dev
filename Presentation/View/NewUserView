@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Presentation.View
+{
+    public class NewUserView
+    {
+        public InputData RequestData()
+        {
+            return this.GetData();
+        }
+
+        private InputData GetData()
+        {
+            InputData input = new InputData();
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Agregue los datos del nuevo usuario");
+            Console.WriteLine(" Ingrese el codigo del usuario: ");
+            input.fields.Add("CodigoSocio", Console.ReadLine());
+            Console.WriteLine(" Ingrese el Nombre: ");
+            input.fields.Add("Nombre", Console.ReadLine());
+            Console.WriteLine(" Ingrese el Apellido: ");
+            input.fields.Add("Apellido", Console.ReadLine());
+            return input;
+        }
+        public void ShowResult(string userName)
+        {
+            Console.WriteLine("El nuevo Usuario "+ userName + "ha sido agregado satisfactoriamente.");
+            Console.WriteLine("-------------------------------");
+        }
+    }
+}

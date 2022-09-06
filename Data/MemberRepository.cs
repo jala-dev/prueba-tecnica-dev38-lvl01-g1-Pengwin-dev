@@ -16,6 +16,11 @@ namespace Data
             LocalMemoryDB.MembersContext.Add(new Member() { ID = 5001, FirstName = "Pedro", SecondName = "Flores" });
         }
 
+        public void AddMember(Member member)
+        {
+            LocalMemoryDB.MembersContext.Add(member);
+        }
+
         public Member GetMember(int id)
         {
             foreach(Member item in LocalMemoryDB.MembersContext)
